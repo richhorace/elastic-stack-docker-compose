@@ -26,7 +26,6 @@ services:
     image: docker.elastic.co/logstash/logstash:${ELASTIC_VERSION}
     volumes:
       - ./elastic-stack/config/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
-      - ./elastic-stack/config/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml
       - ./elastic-stack/config/logstash/pipeline:/usr/share/logstash/pipeline
       - ./elastic-stack/config/logstash/sincedb:/etc/logstash/conf.d/sincedb
       - ./elastic-stack/config/logstash/log4j2.properties:/usr/share/logstash/config/log4j2.properties

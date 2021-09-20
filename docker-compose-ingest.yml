@@ -5,8 +5,7 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_VERSION}
     environment:
-      - cluster.name=docker-pocket
-      # - bootstrap.memory_lock=true
+      - cluster.name=docker-elastic
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - "discovery.type=single-node"
     ulimits:
